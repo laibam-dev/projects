@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            font-family:Arial, Helvetica, sans-serif;
+            color: black;
+            background-color: beige;
+        }
+        .section{
+            margin: 20px;
+            padding: 20px;
+            width: auto;
+            height: auto;
+        
+
+        }
+        #sellerform {
+    border: 1px solid black;   
+    padding: 40px;                 
+    margin: auto;              
+    background-color:transparent;   
+    border-radius: 10px;       
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+        .section h{
+            font-size:30px;
+            font-weight:bold;
+            font-style: oblique;
+            color:rgb(168, 43, 226);
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .form-section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:2px;
+            border-color:bisque;
+        }
+        .input
+        {
+            margin-bottom: 9px;
+            margin-top: 5px;
+        }
+        label{
+            display: block;
+            color: rgb(159, 43, 226);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input,textarea,select{
+          width: 350px;
+          padding: 10px;
+          border-radius: 10px;
+          border-color:rgb(159, 43, 226) ;
+              background-color: transparent;
+              color: rgb(159, 43, 226);
+
+        }
+       input[type="radio"]
+       {
+        width: auto;
+              color: rgb(159, 43, 226);
+
+       }
+       .input-gronp{
+        display: flex;
+        align-items: center;
+       }
+
+       
+       .form-section button{
+        padding: 9px;
+        color:blueviolet;
+        border-radius: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: aliceblue;
+       }
+       
+       .table
+       {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        margin: 20px;
+        padding: 10px;
+        background-color: transparent;
+        border: 1px;
+        border-color: rgb(107, 43, 226);
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+       }
+       .table h1{
+        font-size:30px;
+            font-weight:bold;
+            font-style: oblique;
+            color:rgb(168, 43, 226);
+            margin-bottom: 50px;    
+            
+       }
+       .table-section
+       {
+         width: 90%;
+         border-collapse:collapse;
+         background-color: transparent;
+         margin-bottom: 30px;
+
+       }
+
+       .table-section thead th {
+    background-color:rgb(168, 43, 226);
+    color: #fff;
+    padding: 12px;
+    font-style: italic;
+    text-align: left;
+}
+.table-section tbody td{
+    color: black;
+    text-align: left;
+    font-style: italic;
+}
+.table-section tbody tr:hover {
+    background-color: #f3f7ff;
+}
+.table-section button
+{
+        padding: 6px 12px;
+    margin: 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: bold;
+    background-color:aquamarine;
+
+}
+.table-section button:first-child {
+    background-color: #28a745;
+    color: white;
+}
+
+.table-section button:last-child {
+    background-color: #d9534f;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="section">
+        <h>SELLER FORM</h>
+        <div class="form-section">
+            <form id="sellerform">
+                <div class="input">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="type here...">
+                </div>
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="type here...">
+                </div>
+        
+                <div class="input">
+                    <label for="phone">Phone</label>
+                    <input type="phone" id="phone" placeholder="typed here">
+                </div>
+
+                <div class="input">
+                    <label for="categories">
+                    </label>
+                    <select id="categories" name="categories">
+                    <option value="">select option</option>
+                    <option value="clothing">clothing</option>
+                    <option value="stationary">stationary</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="toyes">toyes</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="other">Other</option>
+                    </select>
+                </div>
+
+                      <div class="input-group">
+        <label>Services Offered:</label>
+        <input type="checkbox" id="delivery" name="services" value="delivery">
+        <label for="delivery">Delivery</label>
+
+        <input type="checkbox" id="installation" name="services" value="installation">
+        <label for="installation">Installation</label>
+
+        <input type="checkbox" id="warranty" name="services" value="warranty">
+        <label for="warranty">Warranty</label>
+                      </div>
+
+                <div class="input">
+             <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter full address"></textarea>
+                </div>
+                <div class="button">
+        <button type="submit">Add Seller</button>
+        <button type="button" id="fillRandom">Fill Randomly</button>
+      </div>
+            </form>
+        </div>
+    </section>
+    <section class="table">
+        <h1>SELLER RECORD</h1>
+        <table class="table-section">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>categories</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="sellertable">
+                <tr>
+                    <td>1</td>
+                    <td>laiba</td>
+                    <td>oiiuy76598</td>
+                    <td>78906543</td>
+                    <td>qadirabad</td>
+                    <td>clothing</td>
+                    <td>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+   <script src="script2.js"></script>
+
+</body>
+</html>
