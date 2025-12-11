@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operation</title>
+    <style>
+        .container {
+            background-color: aliceblue;
+            margin: 20px;
+            padding: 20px;
+            border-bottom: 3px solid black;
+                
+
+        }
+
+        .container h1 {
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            font-style: italic;
+        }
+
+        .container .btn1 {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: antiquewhite;
+            font-style: italic;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .btndiv
+        {
+            display: flex;
+            justify-content: center;
+        }
+        #boxx {
+            background-color: aliceblue;
+            margin: 14px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .table1 {
+            width: 60%;
+            border-collapse: collapse;
+            background-color: whitesmoke;
+        }
+
+        .table1 th, .table1 td {
+            border-bottom: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table1 th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="box">
+        <h1>API METHODS</h1>
+        <div class="btndiv">
+        <button class="btn1" id="btn2">Fetch data</button>
+        <button class="btn1" id="btn3">post data</button>
+        <button class="btn1" id="btn4">Put data</button>
+        <button class="btn1" id="btn5">Patch data</button>
+        <button class="btn1" id="btn6">Delete data</button>
+        </div>
+    </div>
+
+    <div id="boxx">
+        <table class="table1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                </tr>
+            </thead>
+            <tbody></tbody> 
+        </table>
+    </div>
+
+    
+    <script src="api.js"></script>
+</body>
+</html>
